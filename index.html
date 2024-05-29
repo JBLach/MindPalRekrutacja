@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="preload" as="font" href="./assets/fonts/inter-v13-latin_latin-ext-regular.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="./assets/fonts/inter-v13-latin_latin-ext-500.woff2" type="font/woff2" crossorigin>
+  </head>
+  <body>
+    <div id="notebook" class="notebook">
+      <div class="notebook__header">
+        <div class="notebook__header--heading">
+          <img
+            class="notebook__icon"
+            src="./assets/img/note-icon.svg"
+            alt="Notes"
+            width="22"
+            height="22"
+            loading="eager"
+          >
+          <h1 class="notebook__header--text">
+            Notes
+          </h1>
+        </div>
+        <div class="notebook__searchbar">
+          <input class="primary-text-field notebook__searchbar--field" type="text" placeholder="Search notes...">
+          <img
+            class="notebook__searchbar--btn"
+            src="./assets/img/search-icon.svg"
+            alt="Search"
+            width="24"
+            height="24"
+            loading="eager"
+          >
+        </div>
+        <button class="btn btn-primary notebook__header--addnew hidden">
+          Add New
+        </button>
+      </div>
+      <div class="notebook__form hidden">
+        <div class="notebook__form--header">
+          <span class="notebook__form--info">Add new note</span>
+          <span class="action-text cancel-btn">Cancel</span>
+        </div>
+        <form id="noteForm" action="">
+          <input 
+            class="primary-text-field notebook__form--field" 
+            type="text" 
+            placeholder="Untitled Note"
+            required
+          >
+          <textarea 
+            class="primary-text-field notebook__form--textarea" 
+            type="text" 
+            placeholder="Your note..."
+            rows="8"
+            required
+          ></textarea>
+          <button class="btn btn-primary notebook__form--btn">Add</button>
+        </form>
+      </div>
+      <div id="notesContainer"></div>
+      <div class="notebook__empty">
+        <div class="notebook__empty--icon">
+          <img
+            src="./assets/img/info-icon.svg"
+            alt="No notes yet"
+            width="24"
+            height="24"
+            loading="eager"
+          >
+        </div>
+        <p class="notebook__empty--heading">
+          No notes yet
+        </p>
+        <p class="notebook__empty--desc">
+          Add a note to keep track of your learnings.
+        </p>
+        <button class="btn btn-secondary notebook__empty--btn">
+          <img 
+            src="./assets/img/addNote-icon.svg"
+            alt="Add note"
+            width="24"
+            height="24"
+          >
+          Add Note
+        </button>
+      </div>
+      <div class="notebook-delete-popup hidden">
+        <div class="notebook-delete-popup__wrapper">
+          <p class="notebook-delete-popup__heading">
+            Delete Note
+          </p>
+          <p class="notebook-delete-popup__desc">
+            Are you sure you want to delete this note?
+          </p>
+          <div class="notebook-delete-popup__buttons">
+            <button class="btn btn-secondary cancel-delete-btn">
+              Cancel
+            </button>
+            <button class="btn btn-primary delete-btn">
+              Delete
+            </button>
+          </div>
+
+        </div>
+      </div>
+      <div class="overlay hidden"></div>
+    </main>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
